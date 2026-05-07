@@ -24,7 +24,7 @@ reverseString("typescript");
 
 type StringOrNumber = string | number;
 
-const checkType = (input: StringOrNumber): StringOrNumber => {
+const checkType = (input: StringOrNumber): "String" | "Number" => {
   if (typeof input === "string") {
     return "String";
   } else {
@@ -35,6 +35,31 @@ const checkType = (input: StringOrNumber): StringOrNumber => {
 checkType("Hello");
 checkType(42);
 
+// problem 5
+
+interface Book {
+  title: string;
+  author: string;
+  publishedYear: number;
+  isRead?: boolean;
+}
+
+const toggleReadStatus = (book: Book): Book => {
+  const updatedBook = {
+    ...book,
+    isRead: true,
+  };
+
+  return updatedBook;
+};
+
+const myBook = {
+  title: "TypeScript Guide",
+  author: "Jane Doe",
+  publishedYear: 2024,
+};
+
+toggleReadStatus(myBook);
 
 
 
