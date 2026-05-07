@@ -48,6 +48,7 @@ getProperty(user, "name");
 
 
 // problem 5
+
 interface Book {
   title: string;
   author: string;
@@ -114,4 +115,6 @@ const getIntersection = (value1: number[], value2: number[]) : number[] => {
 }
 
 getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
+
+
 
