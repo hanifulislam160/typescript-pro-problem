@@ -9,3 +9,15 @@ const filterEvenNumbers = (numbers: number[]): number[] => {
 
 filterEvenNumbers([1, 2, 3, 4, 5, 6]);
 
+
+// Problem 2
+
+const reverseString = (string: string) : string => {
+  const reverseString = string.split('').reverse().join('');
+  return reverseString;
+};
+
+reverseString("typescript");
+
+
+
