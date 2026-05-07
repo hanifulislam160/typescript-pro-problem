@@ -35,8 +35,8 @@ const checkType = (input: StringOrNumber): "String" | "Number" => {
 checkType("Hello");
 checkType(42);
 
-// problem 5
 
+// problem 5
 interface Book {
   title: string;
   author: string;
@@ -60,6 +60,37 @@ const myBook = {
 };
 
 toggleReadStatus(myBook);
+
+
+// Problem 6
+
+class Person {
+   name: string;
+   age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Student extends Person {
+   grade: string;
+
+    constructor (name:string, age:number, grade:string ){
+      super(name, age)
+       this.grade = grade;
+    }
+    
+
+  getDetails() : string {
+    const user = `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`
+    return  user;
+  }
+}
+
+const student = new Student("Alice", 20, "A");
+student.getDetails();
 
 
 
