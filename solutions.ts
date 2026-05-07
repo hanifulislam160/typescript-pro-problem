@@ -93,4 +93,14 @@ const student = new Student("Alice", 20, "A");
 student.getDetails();
 
 
+// problem 7
+
+const getIntersection = (value1: number[], value2: number[]) : number[] => {
+
+    const match = value1.filter((number) => value2.includes(number));
+    return match;
+
+}
+
+getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]);
 
